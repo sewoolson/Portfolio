@@ -4,12 +4,13 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Sam Woolson's Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    
     <link rel="stylesheet" href="styles.css"/>
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc32 3vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
     crossorigin="anonymous"
     referrerpolicy="no-referrer"/>
 </head>
@@ -19,14 +20,18 @@
         <img class="main-logo" src="/assets/main-nav.png" href="#"/>
     </header>
 
-    <section id="hero-section">
+    <section id="hero">
+
+        <div class="hero-container">
+
+
         <div class="it-me"><img class="it-me" src="/assets/itme.svg"/>
         </div><!--end it me div-->
             <div id="intro">
-        <h1>Hello, I'm Sam.</h1>
-        <h2>I'm an inquisitive and adaptable full-stack designer. </h2>
+        <h1>Hi, I'm Sam!</h1>
+        <h2>I'm an incredibly inquisitive and adaptable full-stack designer. </h2>
         <p id="intro-paragraph">
-            Driven by curiosity and an unwavering desire to contribute to humanity through technology, whether in design or development.
+        With over 8 years of graphic design experience, 2 years as a UX/UI Designer, and 2 years of full-stack experience, I am driven by curiosity and an unwavering desire to contribute to humanity through technology, whether in design or development.
         </p>
         
 <div id="button-container">
@@ -36,25 +41,34 @@
         <button><a href="https://www.linkedin.com/in/samwoolson/" target="_blank">LinkedIn</a><i class="fa-solid fa-arrow-up-right-from-square"></i></button>
         <button><a href="https://github.com/sewoolson" target="_blank">Github</a><i class="fa-solid fa-arrow-up-right-from-square" ></i></button>
     </div><!-- end of button-container-->
-</div><!-- end of intro-->
-    </div>
-        </div><!-- end of intro-->
-    </div><!--end hero-container-->
+
+</div><!-- end of intro div-->
+
+
+</div><!-- end of hero-container div-->
     </section><!-- end of hero-->
 
     <main>
     <section id="skills">
     <div class="skills-container">
         <h3>Skill Highlights</h3>
-     <div class="skills-wrap">
+        <p>Since graduating with a BFA in Graphic Design in 2016, UX Academy and Full-stack development course in 2022 I've been busy. Here are a few of the many skills I have acquired along the way:</p>
+        <div class="skills-wrap">
         <p class="skill-tag">Consulting</p>
         <p class="skill-tag">UX/UI</p>
+        <p class="skill-tag">Empathy</p>
         <p class="skill-tag">Figma</p>
+        <p class="skill-tag">Adobe Creative Suite</p>
+        <p class="skill-tag">Critical Thinking</p>
+        <p class="skill-tag">Design Principles</p>
+        <p class="skill-tag">Front-end Development</p>
+        <p class="skill-tag">Back-end Development</p>
         <p class="skill-tag">HTML</p>
         <p class="skill-tag">CSS</p>
         <p class="skill-tag">Javascript</p>
         <p class="skill-tag">SCSS</p>
         <p class="skill-tag">Custom API</p>
+        <p class="skill-tag">API</p>
         <p class="skill-tag">a11y</p>
         <p class="skill-tag">Tailwind</p>
         <p class="skill-tag">React</p>
@@ -65,13 +79,13 @@
         <p class="skill-tag">SQL</p>
         <p class="skill-tag">noSQL</p>
     
-     </div><!--end of skills-wrap-->   
+        </div><!--end of skills-wrap-->   
     </div><!-- end of skills-container-->
     </section><!-- end of skills section-->
-
     <section id="portfolio">
         <div class="portfolio-container">
         <h3>Portfolio</h3>
+        <p>These are my most recent pieces. Most are password protected. If interested in hiring me please reach out via the form below and I will gladly share the password. Thank you.</p>
         <div class="cards-grid">
 
 <article id="card">
@@ -80,19 +94,70 @@
     </div><!--end project-cover-img-->
     <div class="card-content">
     <h4>RUSH</h4>
+    <p id="industry-tag">Healthcare</p>
     <p id="card-para">Component library, Brand refresh, appointment hub</p>
     <div class="button-wrap">
-    <button>Short Read</button>
-    <button>Long Read</button>
-    <button>Figma</button>
+        <!-- Short Version Button -->
+      <button type="button" class="button" data-bs-toggle="modal" data-bs-target="#shortModal">
+        Short Version
+      </button>
+  
+      <!-- Long Version Button -->
+      <button type="button" class="button" data-bs-toggle="modal" data-bs-target="#longModal">
+        Long Version
+      </button>
+    </div>
+  </div>
+  
+  <!-- Short Version Modal -->
+  <div class="modal fade" id="shortModal">
+    <div class="modal-dialog modal-xl modal-dialog-scrollable">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Rush Case Study - Short Version</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+  
+        <!-- Modal Body -->
+        <div class="modal-body">
+          <h5>Heading One</h5>
+          <p class="modal-text">Body for Short Version</p>
+        </div>
+  
+        <!-- Modal Footer -->
+        <div class="modal-footer">
+          <button type="button" class="buton" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Long Version Modal -->
+  <div class="modal fade" id="longModal">
+    <div class="modal-dialog modal-xl modal-dialog-scrollable">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Rush Case Study - Long Version</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+  
+        <!-- Modal Body -->
+        <div class="modal-body">
+          <h5>Heading Two</h5>
+          <p class="modal-text">Body for Long Version</p>
+        </div>
+  
+        <!-- Modal Footer -->
+        <div class="modal-footer">
+          <button type="button" class="button" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
 </div><!--end button-wrap-->
-    <div class="skills-wrap">
-        <p id="industry-tag">Healthcare</p>
-<p class="skill-tag">UX/UI</p>
-<p class="skill-tag">a11y</p>
 </div><!--end of card-content -->
-    </div><!--end of skills tags-->
-    
 </article><!--end of card 1-->
 
 <article id="card">
@@ -101,39 +166,75 @@
     </div><!--end project-cover-img-->
     <div class="card-content">
     <h4>Client</h4>
-    <p id="card-para">Component library, Brand refresh, appointment hub</p>
+    <p id="industry-tag">Industry Tag</p>
+    <p id="card-para">Project Description</p>
     <div class="button-wrap">
-    <button>Short Read</button>
-    <button>Long Read</button>
-    <button>Figma</button>
+    <!-- Short Version Button -->
+    <button type="button" class="button" data-bs-toggle="modal" data-bs-target="#shortModal2">
+        Short Version
+      </button>
+  
+      <!-- Long Version Button -->
+      <button type="button" class="button" data-bs-toggle="modal" data-bs-target="#longModal2">
+        Long Version
+      </button>
+    </div>
+  </div>
+  
+  <!-- Short Version Modal -->
+  <div class="modal fade" id="shortModal2">
+    <div class="modal-dialog modal-xl modal-dialog-scrollable">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Case Study - Short Version</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+  
+        <!-- Modal Body -->
+        <div class="modal-body">
+          <h5>Heading One</h5>
+          <p class="modal-text">Body for Short Version</p>
+        </div>
+  
+        <!-- Modal Footer -->
+        <div class="modal-footer">
+          <button type="button" class="button" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Long Version Modal -->
+  <div class="modal fade" id="longModal2">
+    <div class="modal-dialog modal-xl modal-dialog-scrollable">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Case Study - Long Version</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+  
+        <!-- Modal Body -->
+        <div class="modal-body">
+          <h5>Heading Two</h5>
+          <p class="modal-text">Body for Long Version</p>
+        </div>
+  
+        <!-- Modal Footer -->
+        <div class="modal-footer">
+          <button type="button" class="button" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+ 
 </div><!--end button-wrap-->
-    <div class="skills-wrap">
-        <p id="industry-tag">Healthcare</p>
-<p class="skill-tag">UX/UI</p>
-<p class="skill-tag">a11y</p>
+
 </div><!--end of card-content -->
-    </div><!--end of skills tags-->
 </article><!--end of card 2-->
 
-<article id="card">
-    <div class="project-cover-img">
-<img src="">
-    </div><!--end project-cover-img-->
-    <div class="card-content">
-    <h4>Client</h4>
-    <p id="card-para">Component library, Brand refresh, appointment hub</p>
-    <div class="button-wrap">
-    <button>Short Read</button>
-    <button>Long Read</button>
-    <button>Figma</button>
-</div><!--end button-wrap-->
-    <div class="skills-wrap">
-        <p id="industry-tag">Healthcare</p>
-<p class="skill-tag">UX/UI</p>
-<p class="skill-tag">a11y</p>
-</div><!--end of card-content -->
-    </div><!--end of skills tags-->
-</article><!--end of card 3-->
+
 
 <article id="card">
     <div class="project-cover-img">
@@ -141,18 +242,149 @@
     </div><!--end project-cover-img-->
     <div class="card-content">
     <h4>Client</h4>
-    <p id="card-para">Component library, Brand refresh, appointment hub</p>
+    <p id="industry-tag">Industry tag</p>
+    <p id="card-para">Project description</p>
     <div class="button-wrap">
-    <button>Short Read</button>
-    <button>Long Read</button>
-    <button>Figma</button>
+       <!-- Short Version Button -->
+       <button type="button" class="button" data-bs-toggle="modal" data-bs-target="#shortModal3">
+        Short Version
+      </button>
+  
+      <!-- Long Version Button -->
+      <button type="button" class="button" data-bs-toggle="modal" data-bs-target="#longModal3">
+        Long Version
+      </button>
+    </div>
+  </div>
+  
+  <!-- Short Version Modal -->
+  <div class="modal fade" id="shortModal3">
+    <div class="modal-dialog modal-xl modal-dialog-scrollable">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Case Study - Short Version</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+  
+        <!-- Modal Body -->
+        <div class="modal-body">
+          <h5>Heading One</h5>
+          <p class="modal-text">Body for Short Version</p>
+        </div>
+  
+        <!-- Modal Footer -->
+        <div class="modal-footer">
+          <button type="button" class="button" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Long Version Modal -->
+  <div class="modal fade" id="longModal3">
+    <div class="modal-dialog modal-xl modal-dialog-scrollable">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Case Study - Long Version</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+  
+        <!-- Modal Body -->
+        <div class="modal-body">
+          <h5>Heading Two</h5>
+          <p class="modal-text">body for Long Version</p>
+        </div>
+  
+        <!-- Modal Footer -->
+        <div class="modal-footer">
+          <button type="button" class="button" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+  
 </div><!--end button-wrap-->
-    <div class="skills-wrap">
-        <p id="industry-tag">Healthcare</p>
-<p class="skill-tag">UX/UI</p>
-<p class="skill-tag">a11y</p>
+
 </div><!--end of card-content -->
-    </div><!--end of skills tags-->
+
+</article><!--end of card 3-->
+
+
+
+<article id="card">
+    <div class="project-cover-img">
+<img src="">
+    </div><!--end project-cover-img-->
+    <div class="card-content">
+    <h4>Client</h4>
+    <p id="industry-tag">Industry Tag</p>
+    <p id="card-para">Project Description</p>
+    <div class="button-wrap">
+       <!-- Short Version Button -->
+       <button type="button" class="button" data-bs-toggle="modal" data-bs-target="#shortModal4">
+        Short Version
+      </button>
+  
+      <!-- Long Version Button -->
+      <button type="button" class="button" data-bs-toggle="modal" data-bs-target="#longModal4">
+        Long Version
+      </button>
+    </div>
+  </div>
+  
+  <!-- Short Version Modal -->
+  <div class="modal fade" id="shortModal4">
+    <div class="modal-dialog modal-xl modal-dialog-scrollable">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Case Study - Short Version</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+  
+        <!-- Modal Body -->
+        <div class="modal-body">
+          <h5>Heading One</h5>
+          <p class="modal-text">Model body for Short Version</p>
+        </div>
+  
+        <!-- Modal Footer -->
+        <div class="modal-footer">
+          <button type="button" class="button" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Long Version Modal -->
+  <div class="modal fade" id="longModal4">
+    <div class="modal-dialog modal-xl modal-dialog-scrollable">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Case Study - Long Version</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+  
+        <!-- Modal Body -->
+        <div class="modal-body">
+          <h5>Heading Two</h5>
+          <p class="modal-text">Body for Long Version</p>
+        
+        </div>
+  
+        <!-- Modal Footer -->
+        <div class="modal-footer">
+          <button type="button" class="button" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+</div><!--end button-wrap-->
+</div><!--end of card-content -->
 </article><!--end of card 4-->
 
         </div><!--end of cards grid-->
@@ -162,15 +394,45 @@
     </div><!--end of portfolio-container-->
     </section><!-- end of portfolio section-->
 
+
     <section id="contact">
 
-    </section><!-- end of contact -->
+        <div class="contact-container">
+            <h3>Get in touch!</h3>
+            <!-- <div class="form-container"> -->
+                <form action="">
+                <label for="fullname"><p id="formtext" class="required">Full Name</p>
+                <input type="text" id="name" name="name" required></label>
+
+                <label for="pronouns"><p id="formtext">Pronouns</p>
+                    <input type="text" id="Pronouns" name="pronouns"></label>
+                
+                    <label for="email"><p id="formtext" class="required">Email</p>
+                        <input type="text" id="email" name="email" required></label>
+                    
+                        <label for="subject"><p id="formtext" class="required">Subject</p>
+                            <input type="text" id="subject" name="subject" required></label>
+
+                        <label for="message"><p id="formtext" class="required">Message</p>
+                            <textarea name="message" required></textarea>
+                        </label>
+
+                        <button type="submit" class="submit">Send!</button>
+
+                    </form>
+            </div><!-- end of form-container -->
+        </div><!-- end of contact-container -->
+    </section><!-- end of contact section-->
+
 </main>
     <footer>
         <a class="footer-logo"><img src="/assets/Footer-logo-white.svg" alt="footer logo" aria-label="Sam Woolson's logo"></a>
         <p id="footer-text">© 2024 Sam Woolson. Website design and development by Sam Woolson. All rights reserved.
         </p>
     </footer>
+
+    <script src="index.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
